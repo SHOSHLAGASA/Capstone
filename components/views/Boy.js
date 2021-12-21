@@ -1,5 +1,5 @@
 import html from "html-literal";
 
 export default () => html`
-  <section id="Boy"></section>
+  <section id="Boy">Test</section>
 `;

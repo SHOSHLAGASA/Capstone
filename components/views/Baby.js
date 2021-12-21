@@ -1,18 +1,54 @@
 import html from "html-literal";
-
+import Sweater from "../../Images/baby-sweater.jpg";
 export default () => html`
-  <section id="baby">
-    <h2>Baby Collection</h2>
-    <p>Sweaters</p>
-    <img src="https://cdn.hipwallpaper.com/i/20/35/VlPE6s.jpg" alt="Sweaters" />
+  <h2>Baby Collection</h2>
+  <p>Sweaters</p>
+  <div class="cards">
+    <div class="card">
+      <img src=${Sweater} alt="Sweaters" style="width:100%" />
+      <h1>Baby Sweater</h1>
+      <p class="price">$19.99</p>
+      <p>Some text about the sweater..</p>
+      <p><button>Add to Cart</button></p>
+    </div>
+    <div class="card">
+      <img src=${Sweater} alt="Rompers" style="width:100%" />
+      <h1>Baby Sweater</h1>
+      <p class="price">$19.99</p>
+      <p>Some text about the sweater..</p>
+      <p><button>Add to Cart</button></p>
+    </div>
+    <div class="card">
+      <img src=${Sweater} alt="Rompers" style="width:100%" />
+      <h1>Baby Sweater</h1>
+      <p class="price">$19.99</p>
+      <p>Some text about the sweater..</p>
+      <p><button>Add to Cart</button></p>
+    </div>
+  </div>
+  <span></span>
+  <div class="cards">
+    <div class="card">
+      <img src=${Sweater} alt="Sweaters" style="width:100%" />
+      <h1>Baby Sweater</h1>
+      <p class="price">$19.99</p>
+      <p>Some text about the sweater..</p>
+      <p><button>Add to Cart</button></p>
+    </div>
 
-    <p>Rompers</p>
-    <img src="https://cdn.hipwallpaper.com/i/20/35/VlPE6s.jpg" alt="Rompers" />
-
-    <p>TShirt</p>
-    <img src="https://cdn.hipwallpaper.com/i/20/35/VlPE6s.jpg" alt="TShirt" />
-
-    <p>Pants</p>
-    <img src="https://cdn.hipwallpaper.com/i/20/35/VlPE6s.jpg" alt="Pants" />
-  </section>
+    <div class="card">
+      <img src=${Sweater} alt="Rompers" style="width:100%" />
+      <h1>Baby Sweater</h1>
+      <p class="price">$19.99</p>
+      <p>Some text about the sweater..</p>
+      <p><button>Add to Cart</button></p>
+    </div>
+    <div class="card">
+      <img src=${Sweater} alt="Rompers" style="width:100%" />
+      <h1>Baby Sweater</h1>
+      <p class="price">$19.99</p>
+      <p>Some text about the sweater..</p>
+      <p><button>Add to Cart</button></p>
+    </div>
+  </div>
 `;

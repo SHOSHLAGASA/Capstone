@@ -6,7 +6,7 @@ export default () => html`
     <p>shana is</p>
     <h3>Contact</h3>
     <p>email:shoshanalagasa850@gmail.com</p>
-    <p>addres:st.louis mo</p>
-    &copy; 2021
+    <p>address:st.louis mo</p>
+    <p>&copy; 2021</p>
   </footer>
 `;
