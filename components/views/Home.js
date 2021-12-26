@@ -1,23 +1,25 @@
 import html from "html-literal";
-import home from "../../Images/home.jpg";
-import home2 from "../../Images/home2.jpg";
- const kelvinToFahrenheit = kelvinTemp =>
+
+const kelvinToFahrenheit = kelvinTemp =>
   Math.round((kelvinTemp - 273.15) * (9 / 5) + 32);
 
-export default () => html`
+import home from "../../Images/home.jpg";
+import home2 from "../../Images/home2.jpg";
+
+export default st => html`
   <h3>
     Temperature in ${st.weather.city} is
-    ${kelvinToFahrenheit(st.weather.temp)}F. It feels like
+    ${kelvinToFahrenheit(st.weather.temp)}F. it feels like
     ${kelvinToFahrenheit(st.weather.feelsLike)}F.
   </h3>
   <div class="slideshow-container">
     <div class="mySlides fade">
-      <img src="${home}" style="width:90%" />
+      <img src="${home}" style="width:70%" />
       <div class="text">Caption Text</div>
     </div>
 
     <div class="mySlides fade">
-      <img src="${home2}" style="width:90%" />
+      <img src="${home2}" style="width:70%" />
       <div class="text">Caption Two</div>
     </div>
   </div>

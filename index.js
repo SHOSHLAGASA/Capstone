@@ -1,4 +1,4 @@
-import { Header, Nav, Main, Footer } from "./components";
+import { Nav, Main, Footer } from "./components";
 import * as state from "./store";
 import axios from "axios";
 
@@ -32,38 +32,42 @@ function addEventListener(st) {
     hamburger.classList.toggle("active");
     navMenu.classList.toggle("active");
   }
+
+  //creating a logical operator and stating when the page is on Home do this
+  // select the slide to the image on home
+  // eslint-disable-next-line no-inner-declarations
+  var slideIndex = 0;
+
+  function showSlides() {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("dot");
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) {
+      slideIndex = 1;
+    }
+    for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex - 1].style.display = "block";
+    dots[slideIndex - 1].className += " active";
+    setTimeout(showSlides, 4000); // Change image every 4 seconds
+  }
+  showSlides();
 }
 
-// select the slide on the home DOM
-var slideIndex = 0;
-showSlides();
+// creping weather API
 
-function showSlides() {
-  var i;
-  var slides = document.getElementsByClassName("mySlides");
-  var dots = document.getElementsByClassName("dot");
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
-  }
-  slideIndex++;
-  if (slideIndex > slides.length) {
-    slideIndex = 1;
-  }
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex - 1].style.display = "block";
-  dots[slideIndex - 1].className += " active";
-  setTimeout(showSlides, 4000); // Change image every 4 seconds
-}
-
-// creting weather API
 router.hooks({
   before: (done, params) => {
     const page =
       params && params.hasOwnProperty("page")
         ? capitalize(params.page)
         : "Home";
+
     if (page === "Home") {
       axios
         .get(
@@ -84,6 +88,6 @@ router.hooks({
 router
   .on({
     "/": () => render(state.Home),
-    ":page": params => render(state[capitalize(params.page)])
+    ":view": params => render(state[capitalize(params.view)])
   })
   .resolve();
