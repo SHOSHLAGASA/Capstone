@@ -14,13 +14,11 @@ export default st => html`
   </h3>
   <div class="slideshow-container">
     <div class="mySlides fade">
-      <img src="${home}" style="width:70%" />
-      <div class="text">Caption Text</div>
+      <img src="${home}" style="width:50%" />
     </div>
 
     <div class="mySlides fade">
-      <img src="${home2}" style="width:70%" />
-      <div class="text">Caption Two</div>
+      <img src="${home2}" style="width:50%" />
     </div>
   </div>
   <br />

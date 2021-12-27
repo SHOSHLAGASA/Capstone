@@ -1,4 +1,7 @@
 
+body {
+background-color: rgb(247, 247, 225);
+}
 * {
 padding: 0;
 margin: 0;
@@ -15,7 +18,7 @@ a{
   text-decoration: none;
 }
 .header{
-  border-bottom: 1px solid #e2e8f0;
+  border-bottom: 1px solid #aeb2b9;
 }
 .navbar{
   display: flex;
@@ -100,6 +103,7 @@ align-items: center;
 .bottomPage {
   display: flex;
   justify-content: space-around;
+  border-bottom: 1px solid #aeb2b9;
 }
 
 /* item card */
@@ -225,4 +229,7 @@ img {
   margin-right: auto;
   height: auto;
 
+}
+ {
+  border-bottom: 1px solid #02050c;
 }
