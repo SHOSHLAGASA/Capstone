@@ -7,18 +7,20 @@ import home from "../../Images/home.jpg";
 import home2 from "../../Images/home2.jpg";
 
 export default st => html`
+  <!-- weather on home page -->
   <h3>
     Temperature in ${st.weather.city} is
     ${kelvinToFahrenheit(st.weather.temp)}F. it feels like
     ${kelvinToFahrenheit(st.weather.feelsLike)}F.
   </h3>
+  <!-- image slide on home page -->
   <div class="slideshow-container">
     <div class="mySlides fade">
-      <img src="${home}" style="width:50%" />
+      <img src="${home}" style="width:60%" />
     </div>
 
     <div class="mySlides fade">
-      <img src="${home2}" style="width:50%" />
+      <img src="${home2}" style="width:60%" />
     </div>
   </div>
   <br />
@@ -26,5 +28,16 @@ export default st => html`
     <span class="dot"></span>
     <span class="dot"></span>
     <span class="dot"></span>
+  </div>
+  <!-- adding about -->
+  <div class="bottomPage">
+    <div class="aboutPage">
+      <h3 class="About">About</h3>
+      <div class="AboutText">
+        <p>shana is the perfect wab to find the</p>
+        <p>look for your kids on affordable prices</p>
+        <p>selection of colors and style</p>
+      </div>
+    </div>
   </div>
 `;

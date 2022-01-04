@@ -23,9 +23,12 @@ export default links => html`
       </div>
 
       <div class="hamburger">
+      <div class="dropdown">
         <span class="bar"></span>
         <span class="bar"></span>
         <span class="bar"></span>
+        <span class="bar"></span>
+        </div>
       </div>
     </nav>
   </header>

@@ -32,7 +32,6 @@ function addEventListener(st) {
     hamburger.classList.toggle("active");
     navMenu.classList.toggle("active");
   }
-
   //creating a logical operator and stating when the page is on Home do this
   // select the slide to the image on home
   // eslint-disable-next-line no-inner-declarations
@@ -56,7 +55,10 @@ function addEventListener(st) {
     dots[slideIndex - 1].className += " active";
     setTimeout(showSlides, 4000); // Change image every 4 seconds
   }
-  showSlides();
+
+  if (st.view === "Home") {
+    showSlides();
+  }
 }
 
 // creping weather API
@@ -82,6 +84,21 @@ router.hooks({
           done();
         })
         .catch(err => console.log(err));
+      axios
+        .get(`http://localhost:4040/boy/sweaters`)
+        .then(res => {
+          state.Boy.Sweaters = {};
+          state.Boy.Sweaters.color = res.data.color;
+          state.Boy.Sweaters.price = res.data.price;
+          done();
+        })
+        .catch(err => console.log("error getting sweaters", err));
+
+      axios.get(`http://localhost:4040/boy/pants`).then(res => {
+        state.Boy.Pants = {};
+        state.Boy.Pants.price = res.data.price;
+        state.Boy.Pants.color = res.data.color;
+      });
     }
   }
 });

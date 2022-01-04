@@ -17,9 +17,10 @@ li{
 a{
   text-decoration: none;
 }
-.header{
-  border-bottom: 1px solid #aeb2b9;
+header {
+  border-bottom: 2px solid #aeb2b9;
 }
+
 .navbar{
   display: flex;
   justify-content: space-between;
@@ -100,10 +101,16 @@ align-items: center;
   }
 }
 /* footer */
+footer{
+  margin-top: 4rem;
+}
+.About {
+  border-bottom: 2px solid #aeb2b9;
+}
 .bottomPage {
-  display: flex;
-  justify-content: space-around;
-  border-bottom: 1px solid #aeb2b9;
+  font-size: 20px;
+  font-style: oblique;
+  text-align: center;
 }
 
 /* item card */
@@ -113,19 +120,15 @@ align-items: center;
   justify-content: space-between;
 }
 .card {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  max-width: 300px;
+box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 200px;
   margin: auto;
   text-align: center;
   font-family: arial;
   flex: 1 0 500px;
   box-sizing: border-box;
   margin: 1rem .25em;
-}
 
-.price {
-  color: grey;
-  font-size: 22px;
 }
 
 .card button {
@@ -144,38 +147,12 @@ align-items: center;
   opacity: 0.7;
 }
 
-/* baby  */
- /* .collections{
-  display:flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-} */
-/* .collection {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  max-width: 150px;
-  margin: auto;
-  text-align: center;
-  font-family: arial;
-  flex: 1 0 500px;
-  box-sizing: border-box;
-  margin: 5rem .90em;
-} */ */
+.collection {
 
- /* .collection button  {
-  border: none;
-  outline: 0;
-  padding: 12px;
-  color: black;
-  background-color: wheat;
-  text-align: center;
-  cursor: pointer;
-  width: 150%;
-  font-size: 15px;
-} */
+
+}
 
 /* dropdown */
-
-
 .dropdown {
   position: relative;
   display: inline-block;
@@ -203,12 +180,14 @@ align-items: center;
 
 * {box-sizing: border-box;}
 .mySlides {display: none;}
-img {vertical-align: middle;}
+img {vertical-align: middle;
+}
 
 /* Slideshow container */
 .slideshow-container {
   max-width: 1000em;
   margin: auto;
+
 }
 
 /* Caption text */
@@ -219,7 +198,7 @@ img {vertical-align: middle;}
   position: absolute;
   bottom: 8px;
   width: 100%;
-  text-align: center;
+text-align: center;
 }
 
 /* image */
@@ -227,9 +206,23 @@ img {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  height: auto;
+}
+.AboutText {
+  margin-block-start: 1.5rem;
+}
+.contact{
+  background-color:burlywood;
+  width: 350px;
+  border: 15px solid brown;
+  padding: 40px;
+  margin: px;
+text-align: center;
 
 }
- {
-  border-bottom: 1px solid #02050c;
-}
+
+
+
+
+
+
+
