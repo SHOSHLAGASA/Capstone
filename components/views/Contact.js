@@ -5,9 +5,9 @@ export default () => html`
         <h3>Contact</h3>
         <div class="page">
           <h5>Email</h5>
-          <p>shoshanalagasa850@gmail.com</p>
+          <p>gmail.com</p>
           <h5>Address</h5>
-          <p>st.louis mo</p>
+          <p></p>
         </div>
       </div>
     </div>

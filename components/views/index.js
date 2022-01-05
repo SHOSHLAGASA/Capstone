@@ -3,3 +3,4 @@ export { default as Baby } from "./Baby";
 export { default as Girl } from "./Girl";
 export { default as Boy } from "./Boy";
 export { default as Contact } from "./Contact";
+export { default as Account } from "./Account";
