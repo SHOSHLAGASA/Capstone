@@ -84,21 +84,33 @@ router.hooks({
           done();
         })
         .catch(err => console.log(err));
+      //   axios
+      //     .get(`http://localhost:4040/boy/sweaters`)
+      //     .then(res => {
+      //       state.Boy.Sweaters = {};
+      //       state.Boy.Sweaters.color = res.data.color;
+      //       state.Boy.Sweaters.price = res.data.price;
+      //       done();
+      //     })
+      //     .catch(err => console.log("error getting sweaters", err));
+
+      //   axios.get(`http://localhost:4040/boy/pants`).then(res => {
+      //     state.Boy.Pants = {};
+      //     state.Boy.Pants.price = res.data.price;
+      //     state.Boy.Pants.color = res.data.color;
+      //   });
+    }
+
+    if (page === "Girl") {
       axios
-        .get(`http://localhost:4040/boy/sweaters`)
-        .then(res => {
-          state.Boy.Sweaters = {};
-          state.Boy.Sweaters.color = res.data.color;
-          state.Boy.Sweaters.price = res.data.price;
+        .get("https://capstone-kids.herokuapp.com/sweater")
+        .then(response => {
+          state.Girl.sweater = response.data;
           done();
         })
-        .catch(err => console.log("error getting sweaters", err));
-
-      axios.get(`http://localhost:4040/boy/pants`).then(res => {
-        state.Boy.Pants = {};
-        state.Boy.Pants.price = res.data.price;
-        state.Boy.Pants.color = res.data.color;
-      });
+        .catch(error => {
+          console.log("It puked", error);
+        });
     }
   }
 });

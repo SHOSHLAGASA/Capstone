@@ -1,3 +1,4 @@
 export default {
-  view: "Girl"
+  view: "Girl",
+  sweater: {}
 };
