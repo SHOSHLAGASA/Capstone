@@ -2,21 +2,31 @@ const dotenv = require("dotenv");
 
 const express = require("express");
 
+const SweaterRouter = require("./routes/sweaterRoutes");
+
 const mongoose = require("mongoose");
 
 const morgan = require("morgan");
 
 const app = express();
 app.use(morgan("dev"));
+
 dotenv.config();
-const DB = process.env.DATABASE.replace(
-  "<PASSWORD>",
-  process.env.DATABASE_PASSWORD
+mongoose.connect(process.env.MONGODB);
+const db = mongoose.connection;
+
+db.on("error", console.error.bind(console, "connection error:"));
+db.once(
+  "open",
+  console.log.bind(console, "Successfully opened connection to Mongo!")
 );
+// const DB = process.env.DATABASE.replace(
+//   "<PASSWORD>",
+//   process.env.DATABASE_PASSWORD
+// );
 
-mongoose.connect(DB).then(() => console.log("DB Connection successful"));
+// mongoose.connect(DB).then(() => console.log("DB Connection successful"));
 
-const SweaterRouter = require("./routes/sweaterRoutes");
 // logging information out to the console after every request
 const logging = (request, response, next) => {
   console.log(`${request.method} ${request.url} ${Date.now()}`);
@@ -43,7 +53,7 @@ app.use(cors);
 app.use(express.json());
 app.use(logging);
 
-app.use("/api/v1/Sweaters", SweaterRouter);
+app.use("/sweaters", SweaterRouter);
 
 // Handle the request with HTTP GET method from http://localhost:4040/status
 app.get("/status", (request, response) => {
