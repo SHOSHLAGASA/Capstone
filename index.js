@@ -101,11 +101,11 @@ router.hooks({
       //     state.Boy.Pants.color = res.data.color;
       //   });
     }
-
     if (page === "Girl") {
       axios
-        .get("https://capstone-kids.herokuapp.com/sweaters")
+        .get("http://localhost:4040/")
         .then(response => {
+          state.console.log(response);
           state.Girl.sweater = response.data;
           console.log(response.data);
           done();

@@ -4,7 +4,8 @@ import dresses from "../../Images/dresses.jpeg";
 import pants from "../../Images/pants.jpg";
 import TShirt from "../../Images/TShirt.jpg";
 
-export default () => html`
+export default st => html`
+  ${st}
   <h2>Girl Collection</h2>
   <section id="sweater">
     <div class="card">
