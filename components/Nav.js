@@ -7,17 +7,8 @@ export default links => html`
         <ul class="nav-menu">
           ${links.map(
             link =>
-              html`
-                <li class="nav-item">
-                  <a
-                    href="/${link.title}"
-                    class="nav-link"
-                    title="${link.title}"
-                    data-navigo
-                    >${link.text}</a
-                  >
-                </li>
-              `
+              `<li><a href="/${link.title}" title="${link.title}" data-navigo>${link.text}</a></li>
+          `
           )}
         </ul>
       </div>

@@ -32,6 +32,7 @@ function addEventListener(st) {
     hamburger.classList.toggle("active");
     navMenu.classList.toggle("active");
   }
+
   //creating a logical operator and stating when the page is on Home do this
   // select the slide to the image on home
   // eslint-disable-next-line no-inner-declarations
@@ -103,7 +104,7 @@ router.hooks({
 
     if (page === "Girl") {
       axios
-        .get("https://capstone-kids.herokuapp.com/sweater")
+        .get("https://capstone-kids.herokuapp.com/sweaters")
         .then(response => {
           state.Girl.sweater = response.data;
           done();

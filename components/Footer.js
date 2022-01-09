@@ -10,8 +10,8 @@ export default () => html`
         <p>look for your kids on affordable prices</p>
         <p>selection of colors and style</p>
       </div> -->
-<!--
-       <div class="contactPage">
+
+        <div class="contactPage">
         <h3>Contact</h3>
         <div class="page">
           <h5>Email</h5>
@@ -20,7 +20,7 @@ export default () => html`
           <p>st.louis mo</p>
         </div>
       </div>
-    </div> -->
+    </div>
     <p>&copy; 2021</p>
   </footer>
 `;

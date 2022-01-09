@@ -5,6 +5,8 @@ const kelvinToFahrenheit = kelvinTemp =>
 
 import home from "../../Images/home.jpg";
 import home2 from "../../Images/home2.jpg";
+import Dress from "../../Images/Dress.jpg";
+import pants from "../../Images/pants.jpg";
 
 export default st => html`
   <!-- weather on home page -->
@@ -39,5 +41,9 @@ export default st => html`
         <p>selection of colors and style</p>
       </div>
     </div>
+  </div>
+  <div class="addImg"></div>
+  <img src="${pants}" alt="pants" style="width:20%" />
+  <img src="${Dress}" alt="Dress" style="width:20%" />
   </div>
 `;

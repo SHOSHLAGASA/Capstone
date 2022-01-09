@@ -16,7 +16,7 @@ export default () => html`
     <div>
       <label for="Password">Password:</label>
       <input
-        type="Keep private"
+        password="Keep private"
         name="Password"
         id="Password"
         placeholder="Enter Password"
