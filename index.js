@@ -107,6 +107,7 @@ router.hooks({
         .get("https://capstone-kids.herokuapp.com/sweaters")
         .then(response => {
           state.Girl.sweater = response.data;
+          console.log(response.data);
           done();
         })
         .catch(error => {

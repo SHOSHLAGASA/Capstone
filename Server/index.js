@@ -53,7 +53,7 @@ app.use(cors);
 app.use(express.json());
 app.use(logging);
 
-app.use("/sweaters", SweaterRouter);
+app.use("/", SweaterRouter);
 
 // Handle the request with HTTP GET method from http://localhost:4040/status
 app.get("/status", (request, response) => {
