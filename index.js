@@ -62,8 +62,6 @@ function addEventListener(st) {
   }
 }
 
-// creping weather API
-
 router.hooks({
   before: (done, params) => {
     const page =
@@ -85,27 +83,33 @@ router.hooks({
           done();
         })
         .catch(err => console.log(err));
-      //   axios
-      //     .get(`http://localhost:4040/boy/sweaters`)
-      //     .then(res => {
-      //       state.Boy.Sweaters = {};
-      //       state.Boy.Sweaters.color = res.data.color;
-      //       state.Boy.Sweaters.price = res.data.price;
-      //       done();
-      //     })
-      //     .catch(err => console.log("error getting sweaters", err));
-
-      //   axios.get(`http://localhost:4040/boy/pants`).then(res => {
-      //     state.Boy.Pants = {};
-      //     state.Boy.Pants.price = res.data.price;
-      //     state.Boy.Pants.color = res.data.color;
-      //   });
     }
+
     if (page === "Girl") {
+      document.querySelector("form").addEventListener("submit", event => {
+        event.preventDefault();
+
+        const inputList = event.target.elements;
+        console.log("Input Element List", inputList);
+
+        const requestData = {
+          type: inputList.type.value,
+          price: inputList.price.value,
+          size: inputList.size.value,
+          color: inputList.color.value
+        };
+        console.log("request Body", requestData);
+        state.Cart.sweaters.push(requestData);
+        router.navigate("/Cart");
+      });
+    }
+
+    if (page === "Home") {
       axios
-        .get("http://localhost:4040/")
+        .get(`${process.env.SHANA_PLACE_API_URL}`)
         .then(response => {
-          state.console.log(response);
+          state.Girl.sweater = {};
+          console.log(state.Girl.sweater);
           state.Girl.sweater = response.data;
           console.log(response.data);
           done();
@@ -116,6 +120,7 @@ router.hooks({
     }
   }
 });
+
 router
   .on({
     "/": () => render(state.Home),

@@ -6,9 +6,7 @@ background-color: rgb(247, 247, 225);
 padding: 0;
 margin: 0;
 box-sizing: border-box;
-
 }
-
 /* Nav bar*/
 li{
   list-style: none;
@@ -100,9 +98,17 @@ align-items: center;
   }
 }
 /* footer */
-footer{
-  margin-top: 4rem;
+.contactPage{
+  margin-left: 20%;
+  margin-right: 20%;
+font-size: 15px;
+font-style: oblique;
+ border-top: 2px solid #aeb2b9;
+margin-top: 4rem;
+display: flex;
+justify-content: space-around;
 }
+
 .About {
   border-bottom: 2px solid #aeb2b9;
 }
@@ -129,7 +135,6 @@ box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   margin: 1rem .25em;
 
 }
-
 .card button {
   border: none;
   outline: 0;
@@ -141,67 +146,28 @@ box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   width: 100%;
   font-size: 18px;
 }
-
 .card button:hover {
   opacity: 0.7;
 }
-
-.collection {
-
-
-}
-
-/* dropdown */
-.dropdown {
-  position: relative;
-  display: inline-block;
-}
-
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #f1f1f1;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
-}
-
-.dropdown-content a {
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-}
-
-/* On hover, add a black background color with a little bit see-through */
-
 /* HOME */
 
 * {box-sizing: border-box;}
 .mySlides {display: none;}
 img {vertical-align: middle;
+
 }
 
 /* Slideshow container */
-.slideshow-container {
+.slideshow-container  {
   max-width: 1000em;
   margin: auto;
-
 }
 
-.addImg > img  {
-    border: 1px solid #ddd; /* Gray border */
-    border-radius: 4px;  /* Rounded border */
-    padding: 5px; /* Some padding */
-    width: 150px; /* Set a small width */
-  }
-
-  /* Add a hover effect (blue shadow) */
-  .addImg:hover {
-    box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
-  }
-
-
+.image {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
 /* Caption text */
 .text {
   color: #f2f2f2;
@@ -213,12 +179,11 @@ img {vertical-align: middle;
 text-align: center;
 }
 
-/* image */
-img {
-  display: block;
-  margin-left: auto;
+.addImg {
   margin-right: auto;
+  margin-left: 12%;
 }
+
 .AboutText {
   margin-block-start: 1.5rem;
 }
@@ -229,7 +194,6 @@ form {
   flex-direction: column;
   margin: 1rem 1rem;
 }
-
 form > * {
   margin: 0.5rem;
 }

@@ -1,6 +1,5 @@
 import html from "html-literal";
 export default () => html`
-  <form id="Account" method="POST" action="">
     <h2>My Account</h2>
     <div>
     <div>
@@ -23,7 +22,7 @@ export default () => html`
         required
       />
     </div>
-    <input type="hidden" name="customer" id="customer" value="<Your Name>" />
-    <input type="submit" name="submit" value="Sing in" />
+    <input type="password" name="customer" id="customer" value="<Your Name>" />
+    <input type="submit" name="submit" value="Send in" />
   </form>
 `;
