@@ -33,6 +33,25 @@ function addEventListener(st) {
     navMenu.classList.toggle("active");
   }
 
+  if (st === "Girl") {
+    document.querySelector("form").addEventListener("submit", event => {
+      event.preventDefault();
+
+      const inputList = event.target.elements;
+      console.log("Input Element List", inputList);
+
+      const requestData = {
+        type: inputList.type.value,
+        price: inputList.price.value,
+        size: inputList.size.value,
+        color: inputList.color.value
+      };
+      console.log("request Body", requestData);
+      state.Cart.sweaters.push(requestData);
+      router.navigate("/Cart");
+    });
+  }
+
   //creating a logical operator and stating when the page is on Home do this
   // select the slide to the image on home
   // eslint-disable-next-line no-inner-declarations
@@ -83,25 +102,6 @@ router.hooks({
           done();
         })
         .catch(err => console.log(err));
-    }
-
-    if (page === "Girl") {
-      document.querySelector("form").addEventListener("submit", event => {
-        event.preventDefault();
-
-        const inputList = event.target.elements;
-        console.log("Input Element List", inputList);
-
-        const requestData = {
-          type: inputList.type.value,
-          price: inputList.price.value,
-          size: inputList.size.value,
-          color: inputList.color.value
-        };
-        console.log("request Body", requestData);
-        state.Cart.sweaters.push(requestData);
-        router.navigate("/Cart");
-      });
     }
 
     if (page === "Home") {

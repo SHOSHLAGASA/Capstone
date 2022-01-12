@@ -13,12 +13,12 @@ export default st => html`
         <p>price: ${st.sweater[0].price}</p>
         <div>
           <label for="size">Size:</label>
-      <select id="size" name="size">
-      <option value="">Select a Size</option>
-          <option>${st.sweater[2].size}</option>
-          <option>${st.sweater[1].size}</option>
-          <option>${st.sweater[0].size}</option>
-          <option>${st.sweater[3].size}</option>
+          <select id="size" name="size">
+          <option value="">Select a Size</option>
+          <option value="${st.sweater[2].size}">${st.sweater[2].size}</option>
+          <option value="${st.sweater[1].size}">${st.sweater[1].size}</option>
+          <option value="${st.sweater[0].size}">${st.sweater[0].size}</option>
+          <option value="${st.sweater[3].size}">${st.sweater[3].size}</option>
         </select>
         </div>
         <div>
