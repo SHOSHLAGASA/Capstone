@@ -33,7 +33,8 @@ function addEventListener(st) {
     navMenu.classList.toggle("active");
   }
 
-  if (st === "Girl") {
+  if (st.view === "Girl") {
+    console.log("Girlview");
     document.querySelector("form").addEventListener("submit", event => {
       event.preventDefault();
 
@@ -48,6 +49,7 @@ function addEventListener(st) {
       };
       console.log("request Body", requestData);
       state.Cart.sweaters.push(requestData);
+      console.log("cart", state.Cart.sweaters);
       router.navigate("/Cart");
     });
   }
@@ -55,30 +57,30 @@ function addEventListener(st) {
   //creating a logical operator and stating when the page is on Home do this
   // select the slide to the image on home
   // eslint-disable-next-line no-inner-declarations
-  var slideIndex = 0;
 
-  function showSlides() {
-    var i;
-    var slides = document.getElementsByClassName("mySlides");
-    var dots = document.getElementsByClassName("dot");
-    for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";
-    }
-    slideIndex++;
-    if (slideIndex > slides.length) {
-      slideIndex = 1;
-    }
-    for (i = 0; i < dots.length; i++) {
-      dots[i].className = dots[i].className.replace(" active", "");
-    }
-    slides[slideIndex - 1].style.display = "block";
-    dots[slideIndex - 1].className += " active";
-    setTimeout(showSlides, 4000); // Change image every 4 seconds
-  }
+  //   if (st.view === "Home") {
+  //     var slideIndex = 0;
 
-  if (st.view === "Home") {
-    showSlides();
-  }
+  //     function showSlides() {
+  //       var i;
+  //       var slides = document.getElementsByClassName("mySlides");
+  //       var dots = document.getElementsByClassName("dot");
+  //       for (i = 0; i < slides.length; i++) {
+  //         slides[i].style.display = "none";
+  //       }
+  //       slideIndex++;
+  //       if (slideIndex > slides.length) {
+  //         slideIndex = 1;
+  //       }
+  //       for (i = 0; i < dots.length; i++) {
+  //         dots[i].className = dots[i].className.replace(" active", "");
+  //       }
+  //       slides[slideIndex - 1].style.display = "block";
+  //       dots[slideIndex - 1].className += " active";
+  //       setTimeout(showSlides, 4000); // Change image every 4 seconds
+  //     }
+  //     showSlides();
+  //   }
 }
 
 router.hooks({

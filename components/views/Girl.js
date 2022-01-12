@@ -45,7 +45,9 @@ export default st => html`
         <img src="${TShirt}" alt="sweater" style="width:100%" />
         <p><button>TShirt</button></p>
       </div> -->
-      <input type="hidden" name="customer" id="customer" value="<Your Name>" />
+      <input type="hidden" name="type" id="type" value="Girl" />
+      <input type="hidden" name="price" id="price" value="${st.sweater[0].price}" />
+<input type="hidden" name="customer" id="customer" value="<Your Name>" />
     <input type="submit" name="submit" value="Add" />
   </form>
 `;
