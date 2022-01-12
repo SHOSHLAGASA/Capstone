@@ -5,7 +5,7 @@ import pants from "../../Images/pants.jpg";
 import TShirt from "../../Images/TShirt.jpg";
 
 export default st => html`
-  <form id="sweaters" method="POST" action="">
+  <form id="GirlSweaters" method="POST" action="">
     <h2>Girl Collection</h2>
       <div class="card">
         <img src="${sweater}" alt="sweater" style="width:100%" />
@@ -25,12 +25,17 @@ export default st => html`
           <label for="color">color:</label>
       <select id="color" name="color">
       <option value="">Select a Color</option>
-          <option>${st.sweater[0].color}</option>
-          <option>${st.sweater[5].color}</option>
-          <option>${st.sweater[9].color}</option>
+      <option value="${st.sweater[0].color}">${st.sweater[0].color}</option>
+          <option value="${st.sweater[5].color}">${st.sweater[5].color}</option>
+          <option value="${st.sweater[9].color}">${st.sweater[9].color}</option>
         </select>
-      </div>
 
+        <input type="hidden" name="type" id="type" value="Girl" />
+      <input type="hidden" name="price" id="price" value="${st.sweater[0].price}" />
+<input type="hidden" name="customer" id="customer" value="<Your Name>" />
+    <input type="submit" name="submit" value="Add" />
+      </div>
+</form>
       <!-- <div class="card">
         <img src="${dresses}" alt="sweater" style="width:100%" />
         <p><button>Dresses</button></p>
@@ -44,10 +49,10 @@ export default st => html`
       <div class="card">
         <img src="${TShirt}" alt="sweater" style="width:100%" />
         <p><button>TShirt</button></p>
-      </div> -->
+      </div>
       <input type="hidden" name="type" id="type" value="Girl" />
       <input type="hidden" name="price" id="price" value="${st.sweater[0].price}" />
 <input type="hidden" name="customer" id="customer" value="<Your Name>" />
-    <input type="submit" name="submit" value="Add" />
-  </form>
+     <input type="submit" name="submit" value="Add" /> -->
+  <!-- </form> -->
 `;

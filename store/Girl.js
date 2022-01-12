@@ -1,4 +1,5 @@
 export default {
   view: "Girl",
-  sweaters: []
+  sweaters: [],
+  pants: []
 };

@@ -4,6 +4,8 @@ const express = require("express");
 
 const SweaterRouter = require("./routes/sweaterRoutes");
 
+const PantsRouter = require("./routes/pantsRoutes");
+
 const mongoose = require("mongoose");
 
 const morgan = require("morgan");
@@ -54,6 +56,7 @@ app.use(express.json());
 app.use(logging);
 
 app.use("/", SweaterRouter);
+app.use("/", PantsRouter);
 
 // Handle the request with HTTP GET method from http://localhost:4040/status
 app.get("/status", (request, response) => {

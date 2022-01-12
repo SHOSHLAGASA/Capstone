@@ -35,23 +35,25 @@ function addEventListener(st) {
 
   if (st.view === "Girl") {
     console.log("Girlview");
-    document.querySelector("form").addEventListener("submit", event => {
-      event.preventDefault();
+    document
+      .querySelector("#GirlSweaters")
+      .addEventListener("submit", event => {
+        event.preventDefault();
 
-      const inputList = event.target.elements;
-      console.log("Input Element List", inputList);
+        const inputList = event.target.elements;
+        console.log("Input Element List", inputList);
 
-      const requestData = {
-        type: inputList.type.value,
-        price: inputList.price.value,
-        size: inputList.size.value,
-        color: inputList.color.value
-      };
-      console.log("request Body", requestData);
-      state.Cart.sweaters.push(requestData);
-      console.log("cart", state.Cart.sweaters);
-      router.navigate("/Cart");
-    });
+        const requestData = {
+          type: inputList.type.value,
+          price: inputList.price.value,
+          size: inputList.size.value,
+          color: inputList.color.value
+        };
+        console.log("request Body", requestData);
+        state.Cart.items.push(requestData);
+        console.log("items", state.Cart.items);
+        router.navigate("/Cart");
+      });
   }
 
   //creating a logical operator and stating when the page is on Home do this
@@ -86,8 +88,8 @@ function addEventListener(st) {
 router.hooks({
   before: (done, params) => {
     const page =
-      params && params.hasOwnProperty("page")
-        ? capitalize(params.page)
+      params && params.hasOwnProperty("view")
+        ? capitalize(params.view)
         : "Home";
 
     if (page === "Home") {
@@ -105,8 +107,8 @@ router.hooks({
         })
         .catch(err => console.log(err));
     }
-
-    if (page === "Home") {
+    console.log(page);
+    if (page === "Girl") {
       axios
         .get(`${process.env.SHANA_PLACE_API_URL}`)
         .then(response => {
@@ -120,6 +122,22 @@ router.hooks({
           console.log("It puked", error);
         });
     }
+
+    // if (page === "Home") {
+    //   axios
+    //     .get(`${process.env.SHANA_PLACE_API_URL}`)
+    //     .then(response => {
+    //       state.Girl.Pants = {};
+    //       console.log(state.Girl.Pants);
+    //       state.Girl.Pants = response.data;
+    //       console.log(response.data);
+    //       done();
+    //     })
+    //     .catch(error => {
+    //       console.log("It puked", error);
+    //     });
+    // }
+    done();
   }
 });
 
