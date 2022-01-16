@@ -1,3 +1,6 @@
 export default {
-  view: "Boy"
+  view: "Boy",
+  sweaters: [],
+  pants: [],
+  tshirt: []
 };

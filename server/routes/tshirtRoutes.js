@@ -1,29 +1,31 @@
 const express = require("express");
-const pants = require("../model/pantsModel");
+// const SweaterController = require("../controllers/sweaterController");
+const tshirt = require("../model/tshirtModel");
 const router = express.Router();
 
 router.post("/", (request, response) => {
-  const newPants = new pants(request.body);
-  newPants.save((err, pants) => {
-    return err ? response.sendStatus(500).json(err) : response.json(pants);
+  const newTshirt = new tshirt(request.body);
+  newTshirt.save((err, tshirt) => {
+    return err ? response.sendStatus(500).json(err) : response.json(tshirt);
   });
 });
 
 router.get("/", (request, response) => {
-  pants.find({}, (error, data) => {
+  tshirt.find({}, (error, data) => {
     if (error) return response.sendStatus(500).json(error);
     return response.json(data);
   });
 });
 
 router.get("/:id", (request, response) => {
-  pants.findById(request.params.id, (error, data) => {
+  tshirt.findById(request.params.id, (error, data) => {
     if (error) return response.sendStatus(500).json(error);
     return response.json(data);
   });
 });
+
 router.delete("/:id", (request, response) => {
-  pants.findByIdAndRemove(request.params.id, {}, (error, data) => {
+  tshirt.findByIdAndRemove(request.params.id, {}, (error, data) => {
     if (error) return response.sendStatus(500).json(error);
     return response.json(data);
   });
@@ -31,7 +33,7 @@ router.delete("/:id", (request, response) => {
 
 router.put("/:id", (request, response) => {
   const body = request.body;
-  pants.findByIdAndUpdate(
+  tshirt.findByIdAndUpdate(
     request.params.id,
     {
       $set: {

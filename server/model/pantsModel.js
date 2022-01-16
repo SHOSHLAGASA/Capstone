@@ -1,12 +1,13 @@
 const mongoose = require("mongoose");
 
 //Schema is the structure of the document model
-const PantsSchema = new mongoose.Schema({
+const pantsSchema = new mongoose.Schema({
+  type: String,
   price: Number,
   size: Number,
   color: String
 });
-// creates a Sweater with the model created
-const Pants = mongoose.model("Pants", PantsSchema);
+// creates a pants with the model created
+const pants = mongoose.model("pants", pantsSchema);
 
-module.exports = Pants;
+module.exports = pants;

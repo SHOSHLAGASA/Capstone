@@ -1,29 +1,30 @@
 const express = require("express");
-const pants = require("../model/pantsModel");
+const Romper = require("../model/rompersModel");
 const router = express.Router();
 
 router.post("/", (request, response) => {
-  const newPants = new pants(request.body);
-  newPants.save((err, pants) => {
-    return err ? response.sendStatus(500).json(err) : response.json(pants);
+  const newRomper = new Romper(request.body);
+  newRomper.save((err, Sweater) => {
+    return err ? response.sendStatus(500).json(err) : response.json(Sweater);
   });
 });
 
 router.get("/", (request, response) => {
-  pants.find({}, (error, data) => {
+  Romper.find({}, (error, data) => {
     if (error) return response.sendStatus(500).json(error);
     return response.json(data);
   });
 });
 
 router.get("/:id", (request, response) => {
-  pants.findById(request.params.id, (error, data) => {
+  Romper.findById(request.params.id, (error, data) => {
     if (error) return response.sendStatus(500).json(error);
     return response.json(data);
   });
 });
+
 router.delete("/:id", (request, response) => {
-  pants.findByIdAndRemove(request.params.id, {}, (error, data) => {
+  Romper.findByIdAndRemove(request.params.id, {}, (error, data) => {
     if (error) return response.sendStatus(500).json(error);
     return response.json(data);
   });
@@ -31,7 +32,7 @@ router.delete("/:id", (request, response) => {
 
 router.put("/:id", (request, response) => {
   const body = request.body;
-  pants.findByIdAndUpdate(
+  Romper.findByIdAndUpdate(
     request.params.id,
     {
       $set: {

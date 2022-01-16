@@ -4,7 +4,11 @@ const express = require("express");
 
 const SweaterRouter = require("./routes/sweaterRoutes");
 
-const PantsRouter = require("./routes/pantsRoutes");
+const pantsRouter = require("./routes/pantsRoutes");
+
+const tshirtRouter = require("./routes/tshirtRoutes");
+
+const RomperRouter = require("./routes/romperRoutes");
 
 const mongoose = require("mongoose");
 
@@ -56,7 +60,9 @@ app.use(express.json());
 app.use(logging);
 
 app.use("/", SweaterRouter);
-app.use("/", PantsRouter);
+app.use("/", pantsRouter);
+app.use("/", tshirtRouter);
+app.use("/", RomperRouter);
 
 // Handle the request with HTTP GET method from http://localhost:4040/status
 app.get("/status", (request, response) => {
