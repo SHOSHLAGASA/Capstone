@@ -1,8 +1,25 @@
 import html from "html-literal";
 export default () => html`
-    <h2>My Account</h2>
-    <div>
-    <div>
+  <h2>My Account</h2>
+
+  <form id="Account" method="" action="">
+    <fieldset>
+      <label for="First name">First name:</label>
+      <input
+        type="text"
+        name="First name"
+        id="First name "
+        placeholder="Enter First Name"
+        required
+      />
+      <label for="Last name">Last name:</label>
+      <input
+        type="text"
+        name="Last name"
+        id="Last name"
+        placeholder="Enter Last name"
+        required
+      />
       <label for="Email">Email:</label>
       <input
         type="text"
@@ -11,18 +28,9 @@ export default () => html`
         placeholder="Enter Email"
         required
       />
-    </div>
-    <div>
       <label for="Password">Password:</label>
-      <input
-        password="Keep private"
-        name="Password"
-        id="Password"
-        placeholder="Enter Password"
-        required
-      />
-    </div>
-    <input type="password" name="customer" id="customer" value="<Your Name>" />
-    <input type="submit" name="submit" value="Send in" />
+      <input type="password" name="customer" id="password" value="<password>" />
+      <input type="submit" name="submit" value="Send in" />
+    </fieldset>
   </form>
 `;

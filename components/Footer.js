@@ -6,12 +6,12 @@ export default () => html`
     <div class="bottomPage">
       <div class="contactPage">
         <div class="contacts">
-          <h3>Contact</h3>
           <div class="page">
-            <h5>Email</h5>
-            <p>shoshanalagasa850@gmail.com</p>
-            <h5>Address</h5>
-            <p>st.louis mo</p>
+            <h3>Contact</h3>
+            <p>EMAIL:</p>
+            <p>Shoshanalagasa850@gmail.com</p>
+            <p>ADDRESS:</p>
+            <p>St.louis mo</p>
           </div>
         </div>
 

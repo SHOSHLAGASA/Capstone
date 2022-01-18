@@ -1,27 +1,31 @@
 import html from "html-literal";
-import sweater from "../../Images/sweater.jpg";
+import boy from "../../Images/boy.jpg";
+import sweaters from "../../Images/sweaters.jpg";
 import pants from "../../Images/pants.jpg";
 import TShirt from "../../Images/TShirt.jpg";
 export default st => html`
   <h2>Boy Collection</h2>
-  <!-- GIRL form which contains the sweaters date -->
+  <!-- Boy form which contains the sweaters date -->
   <form id="BoySweaters" method="POST" action="">
-    <div class="card">
-      <img src="${sweater}" alt="sweater" style="width:100%" />
+  <div class="collections">
+    <div class="collection">
+      <img src="${sweaters}" alt="sweaters" style="width:100%" />
+  <div class="add">
       <p>Sweater</p>
       <p>price: ${st.sweater[0].price}</p>
+      </div>
       <div>
-        <label for="size">Size:</label>
+        <!-- <label for="size">Size:</label> -->
         <select id="size" name="size">
-          <option value="">Select a Size</option>
-          <option value="${st.sweater[2].size}">${st.sweater[2].size}</option>
+        <option value="">Select a Size</option>
+          <option value="${st.sweater[0].size}">${st.sweater[0].size}</option>
           <option value="${st.sweater[1].size}">${st.sweater[1].size}</option>
           <option value="${st.sweater[0].size}">${st.sweater[0].size}</option>
           <option value="${st.sweater[3].size}">${st.sweater[3].size}</option>
         </select>
       </div>
       <div>
-        <label for="color">color:</label>
+        <!-- <label for="color">color:</label> -->
         <select id="color" name="color">
           <option value="">Select a Color</option>
           <option value="${st.sweater[0].color}">${st.sweater[0].color}</option>
@@ -54,12 +58,14 @@ export default st => html`
 
   <!-- Boy form which contains the pants date -->
   <form id="BoyPants" method="POST" action="">
-    <div class="card">
+    <div class="collection">
       <img src="${pants}" alt="pants" style="width:100%" />
+      <div class="add">
       <p>Pants</p>
       <p>price: ${st.pants[17].price}</p>
+      </div>
       <div>
-        <label for="size">Size:</label>
+        <!-- <label for="size">Size:</label> -->
         <select id="size" name="size">
           <option value="">Select a Size</option>
           <option value="${st.pants[13].size}">${st.pants[13].size}</option>
@@ -69,7 +75,7 @@ export default st => html`
         </select>
       </div>
       <div>
-        <label for="color">color:</label>
+        <!-- <label for="color"></label> -->
         <select id="color" name="color">
           <option value="">Select a Color</option>
           <option value="${st.pants[13].color}">${st.pants[13].color}</option>
@@ -100,13 +106,15 @@ export default st => html`
     </div>
   </form>
 
-  <form id="BoyTshirt" method="POST" action="">
-    <div class="card">
-      <img src="${TShirt}" alt="sweater" style="width:100%" />
-      <p>Sweater</p>
+  <div id="BoyTshirt" method="POST" action="">
+    <div class="collection">
+      <img src="${TShirt}" alt="TShirt" style="width:100%" />
+      <div class="add">
+      <p>TShirt</p>
       <p>price: ${st.tshirt[25].price}</p>
+      </div>
       <div>
-        <label for="size">Size:</label>
+        <!-- <label for="size">Size:</label> -->
         <select id="size" name="size">
           <option value="">Select a Size</option>
           <option value="${st.tshirt[25].size}">${st.tshirt[25].size}</option>
@@ -116,7 +124,7 @@ export default st => html`
         </select>
       </div>
       <div>
-        <label for="color">color:</label>
+        <!-- <label for="color">color:</label> -->
         <select id="color" name="color">
           <option value="">Select a Color</option>
           <option value="${st.tshirt[25].color}">${st.tshirt[25].color}</option>
@@ -145,5 +153,10 @@ export default st => html`
         <input type="submit" name="submit" value="Add" />
       </div>
     </div>
+  </div>
+</div>
+<div class="collection">
+        <img src="${boy}" alt="boy" style="width:87%" />
+      </div>
   </form>
 `;

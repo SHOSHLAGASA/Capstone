@@ -83,7 +83,7 @@ function addEventListener(st) {
   // select the Girl TShirt form on the DOM
   if (st.view === "Girl") {
     console.log("GirlView");
-    document.querySelector("#GirlTshirts").addEventListener("submit", event => {
+    document.querySelector("#GirlTshirt").addEventListener("submit", event => {
       event.preventDefault();
 
       const inputList = event.target.elements;
@@ -149,7 +149,7 @@ function addEventListener(st) {
   // select the  TShirts BOY form on the DOM
   if (st.view === "Boy") {
     console.log("BoyView");
-    document.querySelector("#BoyTshirts").addEventListener("submit", event => {
+    document.querySelector("#BoyTshirt").addEventListener("submit", event => {
       event.preventDefault();
 
       const inputList = event.target.elements;
@@ -238,7 +238,7 @@ function addEventListener(st) {
   // select the Baby TShirt form on the DOM
   if (st.view === "Baby") {
     console.log("BabyView");
-    document.querySelector("#BabyTshirts").addEventListener("submit", event => {
+    document.querySelector("#BabyTshirt").addEventListener("submit", event => {
       event.preventDefault();
 
       const inputList = event.target.elements;
@@ -357,6 +357,7 @@ router.hooks({
         });
     }
 
+    // date request to the sweaters from the baking
     // date request to the sweaters from the baking
     if (page === "Boy") {
       axios

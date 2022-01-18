@@ -1,7 +1,7 @@
 import html from "html-literal";
 
 export default st => html`
-  <table id="sweaters">
+  <table id="item">
     <tr>
       <th>type</th>
       <th>price</th>
@@ -10,8 +10,10 @@ export default st => html`
     </tr>
     ${st.items
       .map(item => {
-        return `<tr><td>${item.type}</td><td><tr><td>${item.price}</td><td>${item.size}</td><td>${item.color}</td></tr>`;
+        return `<tr><td>${item.type}</td><td>${item.price}</td><td>${item.size}</td><td>${item.color}</td></tr>`;
       })
       .join("")}
   </table>
+
+  <button class="button">Checkout</button>
 `;

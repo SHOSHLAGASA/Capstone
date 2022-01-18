@@ -1,6 +1,6 @@
 import html from "html-literal";
-import sweater from "../../Images/sweater.jpg";
-import dresses from "../../Images/dresses.jpeg";
+import sweaters from "../../Images/sweaters.jpg";
+import image from "../../Images/image.jpg";
 import pants from "../../Images/pants.jpg";
 import TShirt from "../../Images/TShirt.jpg";
 
@@ -8,12 +8,14 @@ export default st => html`
 <h2>Girl Collection</h2>
 <!-- GIRL form which contains the sweaters date -->
   <form id="GirlSweaters" method="POST" action="">
-      <div class="card">
-        <img src="${sweater}" alt="sweater" style="width:50%" />
+  <div class="collections">
+<div class="collection">
+        <img src="${sweaters}" alt="sweater" style="width:100%" />
+        <div class="add">
         <p>Sweater</p>
         <p>price: ${st.sweater[0].price}</p>
+        </div>
         <div>
-          <label for="size">Size:</label>
           <select id="size" name="size">
           <option value="">Select a Size</option>
           <option value="${st.sweater[2].size}">${st.sweater[2].size}</option>
@@ -23,7 +25,6 @@ export default st => html`
         </select>
         </div>
         <div>
-          <label for="color">color:</label>
       <select id="color" name="color">
       <option value="">Select a Color</option>
       <option value="${st.sweater[0].color}">${st.sweater[0].color}</option>
@@ -41,12 +42,13 @@ export default st => html`
 
 <!-- GIRL form which contains the pants date -->
 <form id="GirlPants" method="POST" action="">
-      <div class="card">
+<div class="collection">
         <img src="${pants}" alt="pants" style="width:100%" />
+        <div class="add">
         <p>Pants</p>
         <p>price: ${st.pants[17].price}</p>
+        </div>
         <div>
-          <label for="size">Size:</label>
           <select id="size" name="size">
           <option value="">Select a Size</option>
           <option value="${st.pants[13].size}">${st.pants[13].size}</option>
@@ -56,7 +58,6 @@ export default st => html`
         </select>
         </div>
         <div>
-          <label for="color">color:</label>
       <select id="color" name="color">
       <option value="">Select a Color</option>
       <option value="${st.pants[13].color}">${st.pants[13].color}</option>
@@ -74,12 +75,13 @@ export default st => html`
 
 
         <form id="GirlTshirt" method="POST" action="">
-<div class="card">
-        <img src="${TShirt}" alt="sweater" style="width:100%" />
-        <p>Sweater</p>
+<div class="collection">
+        <img src="${TShirt}" alt="TShirt" style="width:100%" />
+        <div class="add">
+        <p>TShirt</p>
         <p>price: ${st.tshirt[25].price}</p>
+        </div>
         <div>
-          <label for="size">Size:</label>
           <select id="size" name="size">
           <option value="">Select a Size</option>
           <option value="${st.tshirt[25].size}">${st.tshirt[25].size}</option>
@@ -89,7 +91,6 @@ export default st => html`
         </select>
         </div>
         <div>
-          <label for="color">color:</label>
       <select id="color" name="color">
       <option value="">Select a Color</option>
       <option value="${st.tshirt[25].color}">${st.tshirt[25].color}</option>
@@ -103,13 +104,12 @@ export default st => html`
     <input type="submit" name="submit" value="Add" />
       </div>
       </div>
+</div>
       </form>
 
         <!-- GIRL form which contains the TShirt date type, color, size, price  -->
-
-      <!-- <div class="card">
-        <img src="${dresses}" alt="sweater" style="width:100%" />
-        <p><button>Dresses</button></p>
+ <div class="collection">
+        <img src="${image}" alt="sweater" style="width:105%" />
       </div>
 
 `;
