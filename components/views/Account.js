@@ -1,7 +1,7 @@
 import html from "html-literal";
 export default () => html`
-  <form id="Account" method="" action="">
-    <fieldset>
+  <fieldset>
+    <form id="Account" method="" action="">
       <div class="Box">
         <div class="col-25">
           <label for="First name">First name</label>
@@ -59,6 +59,6 @@ export default () => html`
           <input type="submit" name="submit" value="Send in" />
         </div>
       </div>
-    </fieldset>
-  </form>
+    </form>
+  </fieldset>
 `;

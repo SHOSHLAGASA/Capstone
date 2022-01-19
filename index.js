@@ -57,7 +57,6 @@ function addEventListener(st) {
         router.navigate("/Cart");
       });
   }
-
   // select the Girl Pants form on the DOM
   if (st.view === "Girl") {
     console.log("GirlView");

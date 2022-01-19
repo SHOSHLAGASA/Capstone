@@ -1,6 +1,6 @@
 import html from "html-literal";
 import baby from "../../Images/baby.jpg";
-import sweaters from "../../Images/Sweaters.jpg";
+import Sweaters from "../../Images/Sweaters.jpg";
 import pants from "../../Images/pants.jpg";
 import TShirt from "../../Images/TShirt.jpg";
 
@@ -14,7 +14,7 @@ export default st => html`
         <img src="${baby}" alt="Romper" style="width:87%" />
         <div class="add">
           <p>Romper</p>
-          <p>price: ${st.Romper[75].price}</p>
+          <p>price: ${st.Romper[68].price}</p>
         </div>
         <div>
           <select id="size" name="size">
@@ -67,7 +67,7 @@ export default st => html`
   <!-- Baby form which contains the sweaters date -->
   <form id="BabySweaters" method="POST" action="">
     <div class="collection">
-      <img src="${sweaters}" alt="sweaters" style="width:100%" />
+      <img src="${Sweaters}" alt="sweaters" style="width:100%" />
       <div class="add">
         <p>Sweater</p>
         <p>price: ${st.sweater[0].price}</p>

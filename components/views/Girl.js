@@ -13,7 +13,7 @@ export default st => html`
         <img src="${sweaters}" alt="sweater" style="width:100%" />
         <div class="add">
         <p>Sweater</p>
-        <p>price: ${st.sweater[0].price}</p>
+        <p>price: ${st.sweater[1].price}</p>
         </div>
         <div>
           <select id="size" name="size">
