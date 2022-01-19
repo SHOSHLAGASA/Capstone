@@ -67,7 +67,7 @@ export default st => html`
   <!-- Baby form which contains the sweaters date -->
   <form id="BabySweaters" method="POST" action="">
     <div class="collection">
-      <img src="${Sweaters}" alt="sweaters" style="width:100%" />
+      <img src="${Sweaters}" alt="Sweaters" style="width:100%" />
       <div class="add">
         <p>Sweater</p>
         <p>price: ${st.sweater[0].price}</p>
