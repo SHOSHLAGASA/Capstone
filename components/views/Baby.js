@@ -8,10 +8,10 @@ export default st => html`
   <h2>Baby Collection</h2>
 
   <!-- Baby form which contains the pants date -->
+  <div class="collections">
   <form id="BabyRomper" method="POST" action="">
-    <div class="collections">
       <div class="collection">
-        <img src="${baby}" alt="Romper" style="width:86%" />
+        <img src="${baby}" alt="Romper" style="width:87%" />
         <div class="add">
           <p>Romper</p>
           <p>price: ${st.Romper[75].price}</p>
@@ -57,7 +57,9 @@ export default st => html`
             id="customer"
             value="<Your Name>"
           />
-          <input type="submit" name="submit" value="Add" />
+          <div class="types">
+            <input type="submit" name="submit" value="Add" />
+          </div>
         </div>
       </div>
     </div>
@@ -70,19 +72,15 @@ export default st => html`
         <p>Sweater</p>
         <p>price: ${st.sweater[0].price}</p>
       </div>
-      <div class="box">
+      <div>
         <select id="size" name="size">
-          <div class="wrap">
             <option value="">Select a Size</option>
-            <option value="">${st.sweater[61].size}</option>
-            <option value="">${st.sweater[2].size}</option>
-            <option value="">${st.sweater[3].size}</option>
-            <option value="">${st.sweater[62].size}</option>
-            <option value="">${st.sweater[63].size}</option>
-          </div>
+        <option value="${st.sweater[61].size}">${st.sweater[61].size}</option>
+          <option value="${st.sweater[2].size}">${st.sweater[2].size}</option>
+          <option value="${st.sweater[3].size}">${st.sweater[3].size}</option>
+          <option value="${st.sweater[62].size}">${st.sweater[62].size}</option>
+          <option value="${st.sweater[63].size}">${st.sweater[63].size}</option>
         </select>
-        <span class="select-highlight"></span>
-        <span class="select-bar"></span>
       </div>
       <div>
         <select id="color" name="color">
@@ -91,6 +89,7 @@ export default st => html`
           <option value="${st.sweater[5].color}">${st.sweater[5].color}</option>
           <option value="${st.sweater[9].color}">${st.sweater[9].color}</option>
         </select>
+      </div>
         <input
           type="hidden"
           name="type"
@@ -109,9 +108,11 @@ export default st => html`
           id="customer"
           value="<Your Name>"
         />
-        <input type="submit" name="submit" value="Add" />
+        <div class="types">
+          <input type="submit" name="submit" value="Add" />
+        </div>
       </div>
-    </div>
+
   </form>
 
   <!-- Baby form which contains the pants date -->
@@ -157,7 +158,9 @@ export default st => html`
             id="customer"
             value="<Your Name>"
           />
-          <input type="submit" name="submit" value="Add" />
+          <div class="types">
+<input type="submit" name="submit" value="Add" />
+          </div>
         </div>
       </div>
     </div>
@@ -169,51 +172,45 @@ export default st => html`
         <p>TShirt</p>
         <p>price: ${st.tshirt[25].price}</p>
       </div>
-        <div>
-          <select id="size" name="size">
-            <option value="">Select a Size</option>
-            <option value="${st.tshirt[55].size}">${st.tshirt[55].size}</option>
-            <option value="${st.tshirt[25].size}">${st.tshirt[25].size}</option>
-            <option value="${st.tshirt[28].size}">${st.tshirt[28].size}</option>
-            <option value="${st.tshirt[56].size}">${st.tshirt[56].size}</option>
-            <option value="${st.tshirt[57].size}">${st.tshirt[57].size}</option>
-          </select>
-        </div>
-        <div>
-          <select id="color" name="color">
-            <option value="">Select a Color</option>
-            <option value="${st.tshirt[25].color}"
-              >${st.tshirt[25].color}</option
-            >
-            <option value="${st.tshirt[29].color}"
-              >${st.tshirt[29].color}</option
-            >
-            <option value="${st.tshirt[34].color}"
-              >${st.tshirt[34].color}</option
-            >
-            <option value="${st.tshirt[41].color}"
-              >${st.tshirt[41].color}</option
-            >
-          </select>
-          <input
-            type="hidden"
-            name="type"
-            id="type"
-            value="${st.tshirt[55].type}"
-          />
-          <input
-            type="hidden"
-            name="price"
-            id="price"
-            value="${st.tshirt[25].price}"
-          />
-          <input
-            type="hidden"
-            name="customer"
-            id="customer"
-            value="<Your Name>"
-          />
+      <div>
+        <select id="size" name="size">
+          <option value="">Select a Size</option>
+          <option value="${st.tshirt[55].size}">${st.tshirt[55].size}</option>
+          <option value="${st.tshirt[25].size}">${st.tshirt[25].size}</option>
+          <option value="${st.tshirt[28].size}">${st.tshirt[28].size}</option>
+          <option value="${st.tshirt[56].size}">${st.tshirt[56].size}</option>
+          <option value="${st.tshirt[57].size}">${st.tshirt[57].size}</option>
+        </select>
+      </div>
+      <div>
+        <select id="color" name="color">
+          <option value="">Select a Color</option>
+          <option value="${st.tshirt[25].color}">${st.tshirt[25].color}</option>
+          <option value="${st.tshirt[29].color}">${st.tshirt[29].color}</option>
+          <option value="${st.tshirt[34].color}">${st.tshirt[34].color}</option>
+          <option value="${st.tshirt[41].color}">${st.tshirt[41].color}</option>
+        </select>
+        <input
+          type="hidden"
+          name="type"
+          id="type"
+          value="${st.tshirt[55].type}"
+        />
+        <input
+          type="hidden"
+          name="price"
+          id="price"
+          value="${st.tshirt[25].price}"
+        />
+        <input
+          type="hidden"
+          name="customer"
+          id="customer"
+          value="<Your Name>"
+        />
+        <div class="types">
           <input type="submit" name="submit" value="Add" />
+        </div>
         </div>
       </div>
     </div>

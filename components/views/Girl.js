@@ -35,7 +35,9 @@ export default st => html`
         <input type="hidden" name="type" id="type" value="${st.sweater[0].type}" />
       <input type="hidden" name="price" id="price" value="${st.sweater[0].price}" />
 <input type="hidden" name="customer" id="customer" value="<Your Name>" />
+<div class="types">
     <input type="submit" name="submit" value="Add" />
+</div>
       </div>
       </div>
 </form>
@@ -68,7 +70,9 @@ export default st => html`
         <input type="hidden" name="type" id="type" value="${st.pants[20].type}" />
       <input type="hidden" name="price" id="price" value="${st.pants[20].price}" />
 <input type="hidden" name="customer" id="customer" value="<Your Name>" />
+<div class="types">
     <input type="submit" name="submit" value="Add" />
+</div>
       </div>
       </div>
         </form>
@@ -101,13 +105,13 @@ export default st => html`
 <input type="hidden" name="type" id="type" value="${st.tshirt[25].type}" />
       <input type="hidden" name="price" id="price" value="${st.tshirt[25].price}" />
 <input type="hidden" name="customer" id="customer" value="<Your Name>" />
+<div class="types">
     <input type="submit" name="submit" value="Add" />
+</div>
       </div>
       </div>
 </div>
       </form>
-
-        <!-- GIRL form which contains the TShirt date type, color, size, price  -->
  <div class="collection">
         <img src="${image}" alt="sweater" style="width:105%" />
       </div>

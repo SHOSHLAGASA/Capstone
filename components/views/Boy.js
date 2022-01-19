@@ -51,7 +51,9 @@ export default st => html`
           id="customer"
           value="<Your Name>"
         />
+        <div class="types">
         <input type="submit" name="submit" value="Add" />
+        </div>
       </div>
     </div>
   </form>
@@ -101,12 +103,14 @@ export default st => html`
           id="customer"
           value="<Your Name>"
         />
+        <div class="types">
         <input type="submit" name="submit" value="Add" />
+        </div>
       </div>
     </div>
   </form>
 
-  <div id="BoyTshirt" method="POST" action="">
+  <form id="BoyTshirt" method="POST" action="">
     <div class="collection">
       <img src="${TShirt}" alt="TShirt" style="width:100%" />
       <div class="add">
@@ -150,10 +154,12 @@ export default st => html`
           id="customer"
           value="<Your Name>"
         />
+        <div class="types">
         <input type="submit" name="submit" value="Add" />
+        </div>
       </div>
     </div>
-  </div>
+  </form>
 </div>
 <div class="collection">
         <img src="${boy}" alt="boy" style="width:87%" />

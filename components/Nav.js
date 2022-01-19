@@ -19,6 +19,7 @@ export default links => html`
         <span class="bar"></span>
         <span class="bar"></span>
         <span class="bar"></span>
+        <span class="bar"></span>
         </div>
       </div>
     </nav>
