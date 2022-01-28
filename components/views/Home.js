@@ -18,18 +18,18 @@ export default st => html`
     ${kelvinToFahrenheit(st.weather.temp)}F. it feels like
     ${kelvinToFahrenheit(st.weather.feelsLike)}F.
   </h3>
-  <!-- image slide on home page -->
- <div class="slideshow-container">
-    <div class="mySlides fade">
-      <img class="image" src="${home}" style="width:50%" />
+<!-- image slide on home page -->
+   <div class="slideshow-container">
+    <!-- <div class="mySlides fade">
+      <img class="image" src="${home}" style="width:60%" /> -->
     </div>
-     <!-- image number 2 on home page -->
-     <div class="mySlides fade">
-      <img class="image" src="${home2}" style="width:50%" />
+      <!-- image number 2 on home page -->
+     <!-- <div class="mySlides fade">
+      <img class="image" src="${home2}" style="width:60%" />
     </div>
   </div>
-    <br />
-    <div style="text-align:center">
+    <br /> -->
+     <div style="text-align:center">
       <span class="dot"></span>
       <span class="dot"></span>
     </div>
@@ -38,7 +38,7 @@ export default st => html`
       <div class="aboutPage">
         <h3 class="About">About</h3>
         <div class="AboutText">
-          <p>shana is the perfect wab to find the</p>
+          <p>shana is the perfect way to find the</p>
           <p>look for your kids on affordable prices</p>
           <p>selection of colors and style</p>
         </div>

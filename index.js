@@ -6,7 +6,6 @@ import Navigo from "navigo";
 import { capitalize } from "lodash";
 
 import dotenv from "dotenv";
-
 dotenv.config();
 
 const router = new Navigo(window.location.origin);
@@ -258,29 +257,29 @@ function addEventListener(st) {
   //creating a logical operator and stating when the page is on Home do this
   // select the slide to the image on home
   // eslint-disable-next-line no-inner-declarations
-  if (st.view === "Home") {
-    var slideIndex = 0;
-  }
+  // if (st.view === "Home") {
+  //   var slideIndex = 0;
+  // }
 
-  function showSlides() {
-    var i;
-    var slides = document.getElementsByClassName("mySlides");
-    var dots = document.getElementsByClassName("dot");
-    for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";
-    }
-    slideIndex++;
-    if (slideIndex > slides.length) {
-      slideIndex = 1;
-    }
-    for (i = 0; i < dots.length; i++) {
-      dots[i].className = dots[i].className.replace(" active", "");
-    }
-    slides[slideIndex - 1].style.display = "block";
-    dots[slideIndex - 1].className += " active";
-    setTimeout(showSlides, 4000); // Change image every 4 seconds
-  }
-  showSlides();
+  // function showSlides() {
+  //   var i;
+  //   var slides = document.getElementsByClassName("mySlides");
+  //   var dots = document.getElementsByClassName("dot");
+  //   for (i = 0; i < slides.length; i++) {
+  //     slides[i].style.display = "none";
+  //   }
+  //   slideIndex++;
+  //   if (slideIndex > slides.length) {
+  //     slideIndex = 1;
+  //   }
+  //   for (i = 0; i < dots.length; i++) {
+  //     dots[i].className = dots[i].className.replace(" active", "");
+  //   }
+  //   slides[slideIndex - 1].style.display = "block";
+  //   dots[slideIndex - 1].className += " active";
+  //   setTimeout(showSlides, 4000); // Change image every 4 seconds
+  // }
+  // showSlides();
 }
 
 router.hooks({
