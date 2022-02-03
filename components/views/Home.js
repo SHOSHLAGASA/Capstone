@@ -18,17 +18,18 @@ export default st => html`
     ${kelvinToFahrenheit(st.weather.temp)}F. it feels like
     ${kelvinToFahrenheit(st.weather.feelsLike)}F.
   </h3>
-<!-- image slide on home page -->
-   <div class="slideshow-container">
-    <!-- <div class="mySlides fade">
-      <img class="image" src="${home}" style="width:60%" /> -->
+
+  <!-- image slide on home page -->
+  <div class="slideshow-container">
+    <div class="mySlides fade">
+      <img class="image" src="${home}" style="width:60%" />
     </div>
-      <!-- image number 2 on home page -->
-     <!-- <div class="mySlides fade">
+    <!-- image number 2 on home page -->
+   <div class="mySlides fade">
       <img class="image" src="${home2}" style="width:60%" />
     </div>
   </div>
-    <br /> -->
+    <br />
      <div style="text-align:center">
       <span class="dot"></span>
       <span class="dot"></span>
