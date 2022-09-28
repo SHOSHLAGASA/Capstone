@@ -1,6 +1,5 @@
 import html from "html-literal";
 import sweaters from "../../Images/sweaters.jpg";
-import image from "../../Images/image.jpg";
 import pants from "../../Images/pants.jpg";
 import TShirt from "../../Images/TShirt.jpg";
 
@@ -112,8 +111,5 @@ export default st => html`
       </div>
 </div>
       </form>
- <div class="collection">
-        <img src="${image}" alt="sweater" style="width:105%" />
-      </div>
 
 `;

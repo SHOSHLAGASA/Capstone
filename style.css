@@ -47,6 +47,7 @@ color: white;
 display: flex;
 justify-content: space-between;
 align-items: center;
+color: #000;
 }
 .nav-link:hover{
  color: blanchedalmond;
@@ -194,7 +195,7 @@ text-align: center;
 
 /* Clear floats after  containers */
   .collections {
-margin-left: 6%;
+margin-left: 10%;
  }
 
 /* .collection {

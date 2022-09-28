@@ -53,7 +53,7 @@ function addEventListener(st) {
         console.log("request Body", requestData);
         state.Cart.items.push(requestData);
         console.log("items", state.Cart.items);
-        router.navigate("/Cart");
+        router.navigate("/Girl");
       });
   }
   // select the Girl Pants form on the DOM
@@ -74,7 +74,7 @@ function addEventListener(st) {
       console.log("request Body", requestData);
       state.Cart.items.push(requestData);
       console.log("items", state.Cart.items);
-      router.navigate("/Cart");
+      router.navigate("/Girl");
     });
   }
 
@@ -96,7 +96,7 @@ function addEventListener(st) {
       console.log("request Body", requestData);
       state.Cart.items.push(requestData);
       console.log("items", state.Cart.items);
-      router.navigate("/Cart");
+      router.navigate("/Girl");
     });
   }
 
@@ -118,7 +118,7 @@ function addEventListener(st) {
       console.log("request Body", requestData);
       state.Cart.items.push(requestData);
       console.log("items", state.Cart.items);
-      router.navigate("/Cart");
+      router.navigate("/Boy");
     });
   }
 
@@ -140,7 +140,7 @@ function addEventListener(st) {
       console.log("request Body", requestData);
       state.Cart.items.push(requestData);
       console.log("items", state.Cart.items);
-      router.navigate("/Cart");
+      router.navigate("/Boy");
     });
   }
 
@@ -162,7 +162,7 @@ function addEventListener(st) {
       console.log("request Body", requestData);
       state.Cart.items.push(requestData);
       console.log("items", state.Cart.items);
-      router.navigate("/Cart");
+      router.navigate("/Boy");
     });
   }
 
@@ -184,7 +184,7 @@ function addEventListener(st) {
       console.log("request Body", requestData);
       state.Cart.items.push(requestData);
       console.log("items", state.Cart.items);
-      router.navigate("/Cart");
+      router.navigate("/Baby");
     });
   }
   // select the Baby Sweaters form on the DOM
@@ -207,7 +207,7 @@ function addEventListener(st) {
         console.log("request Body", requestData);
         state.Cart.items.push(requestData);
         console.log("items", state.Cart.items);
-        router.navigate("/Cart");
+        router.navigate("/Baby");
       });
   }
 
@@ -229,7 +229,7 @@ function addEventListener(st) {
       console.log("request Body", requestData);
       state.Cart.items.push(requestData);
       console.log("items", state.Cart.items);
-      router.navigate("/Cart");
+      router.navigate("/Baby");
     });
   }
 
@@ -251,7 +251,7 @@ function addEventListener(st) {
       console.log("request Body", requestData);
       state.Cart.items.push(requestData);
       console.log("items", state.Cart.items);
-      router.navigate("/Cart");
+      router.navigate("/Baby");
     });
   }
   //creating a logical operator and stating when the page is on Home do this
