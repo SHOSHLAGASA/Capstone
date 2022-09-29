@@ -59,7 +59,7 @@ export default st => html`
 
   <!-- Boy form which contains the pants date -->
   <form id="BoyPants" method="POST" action="">
-    <div class="collection">
+  <div class="collection">
       <img src="${pants}" alt="pants" style="width:100%" />
       <div class="add">
       <p>Pants</p>

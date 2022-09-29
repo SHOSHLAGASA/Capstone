@@ -62,13 +62,13 @@ color: #000;
 @media only screen and (max-width: 768px){
   ul > li {
     margin-left: 0.5rem;
-   font-size: 1.7rem;
-   font-weight: 500;
-   display: flex;
-   justify-content:center;
-   margin-bottom: 7%;
-   color: #000;
-   }
+  font-size: 1.7rem;
+  font-weight: 500;
+  display: flex;
+  justify-content:center;
+  margin-bottom: 7%;
+  color: #000;
+  }
 
   .nav-menu{
     position:fixed;
@@ -114,14 +114,14 @@ font-size: 15px;
 font-style: oblique;
 border-top: 2px solid #aeb2b9;
 margin-top: 4rem;
- display: flex;
+display: flex;
 justify-content: space-around;
 }
 
 .About {
   border-bottom: 2px solid #aeb2b9;
 }
- .bottomPage {
+.bottomPage {
   font-size: 20px;
   font-style: oblique;
   text-align: center;
@@ -153,8 +153,8 @@ width: 110%;
   /* {
   background-image: url("./Images/kid.jpg");
   background-size: 100%;
-   background-repeat: no-repeat;
-   height: 1000px;
+  background-repeat: no-repeat;
+  height: 1000px;
 
 } */
 
@@ -194,9 +194,9 @@ text-align: center;
 }
 
 /* Clear floats after  containers */
-  .collections {
-margin-left: 10%;
- }
+.collections {
+  margin-left: 10%;
+  }
 
 /* .collection {
   border: 1px solid #ccc;
@@ -291,10 +291,10 @@ input[type=submit]:hover {
   width: 80%;
   margin-top: 6px;
 }
- .Box:after {
+.Box:after {
   content: "";
   display: table;
-   clear: both;
+  clear: both;
 }
 
 @media screen and (max-width: 600px) {
